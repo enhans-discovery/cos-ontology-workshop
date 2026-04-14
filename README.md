@@ -60,13 +60,14 @@ cos-ontology-workshop/
 
 ### Case 2: Enterprise -- 가전 고객 서비스
 
-가전 브랜드의 고객, 제품, 제품 교육자료(비정형 PDF에서 추출한 정형 데이터)를
-온톨로지로 구축하고, Ontology Chat으로 복합 질의에 답변합니다.
+**Case 1과 다른 점**: 비정형 PDF에서 데이터를 추출하여 Object로 변환하는 과정과,
+Knowledge 유무에 따른 Agent 답변 품질 차이를 직접 체험합니다.
 
-**구축 순서**: Object 3개 -> Link 3개 -> Knowledge 2개 -> Ontology Chat 시연
+**구축 순서**: Object 3개 (정형 2 + 비정형 추출 1) -> Link 2개 -> Knowledge 2개 -> Ontology Chat Before/After 체험
 
-**최종 결과**: "이 고객이 보유한 제품의 핵심 셀링포인트와 멤버십 혜택을 알려줘"라고 물으면,
-정형 데이터 + 비정형에서 추출한 데이터 + Knowledge가 결합된 답변을 생성합니다.
+**핵심 체험**:
+- 비정형 PDF -> 정형 CSV -> Object 변환 과정
+- Knowledge 없이 질문 -> Knowledge 추가 후 같은 질문 -> 답변 품질 차이 확인
 
 ---
 
