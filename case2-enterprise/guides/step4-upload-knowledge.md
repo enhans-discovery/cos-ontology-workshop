@@ -28,8 +28,9 @@ COS 좌측 메뉴 > Ontology > Knowledge > [+ New Knowledge]
 
 1. [+ New Knowledge] 클릭
 2. Knowledge 이름 입력: `멤버십 등급 규칙`
-3. Knowledge 내용에 `membership-rules.md`의 전체 내용을 붙여넣기
-4. 저장
+3. 태그 입력: `규칙`, `멤버십`, `등급`
+4. Knowledge 내용에 `membership-rules.md`의 전체 내용을 붙여넣기
+5. 저장
 5. Knowledge-Object Link 생성:
    - COS 좌측 메뉴 > Ontology > Link > [+ New Link]
    - Source: `멤버십 등급 규칙` (Knowledge)
@@ -66,8 +67,9 @@ COS 좌측 메뉴 > Ontology > Knowledge > [+ New Knowledge]
 
 1. [+ New Knowledge] 클릭
 2. Knowledge 이름 입력: `제품 도메인 용어사전`
-3. Knowledge 내용에 `product-glossary.md`의 전체 내용을 붙여넣기
-4. 저장
+3. 태그 입력: `용어`, `제품`, `가전`
+4. Knowledge 내용에 `product-glossary.md`의 전체 내용을 붙여넣기
+5. 저장
 5. Knowledge-Object Link 생성:
    - COS 좌측 메뉴 > Ontology > Link > [+ New Link]
    - Source: `제품 도메인 용어사전` (Knowledge)

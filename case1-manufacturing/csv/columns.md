@@ -1,6 +1,6 @@
 # Case 1: 인쇄 공정 자동화 - 데이터 사전
 
-이 문서는 Case 1에서 사용하는 3개 CSV 파일의 모든 컬럼을 설명합니다.
+이 문서는 Case 1에서 사용하는 4개 CSV 파일의 모든 컬럼을 설명합니다.
 
 ---
 
@@ -52,3 +52,38 @@
 | binding_type | 제본 방식 | 무선제본, 중철제본 |
 | order_count | 이 합대 그룹에 포함된 주문 수 (1~8건) | 3, 5 |
 | gang_date | 합대 수행일 (이 날짜에 묶어서 인쇄) | 2026-04-01 |
+
+---
+
+## paper-stock.csv - 용지 재고
+
+인쇄에 사용되는 용지의 재고 현황입니다. 주문과 합대에 필요한 용지가 충분한지 확인하는 데 사용됩니다. 이 Object는 다른 Object와 PK-FK가 아닌 **비즈니스 속성(paper_type, paper_size)**으로 연결됩니다.
+
+| 컬럼명 | 설명 | 예시 |
+|--------|------|------|
+| stock_id | 용지 재고 고유 식별자 (PK) | PS-001 |
+| paper_type | 용지 종류. print-order, gang-group과 동일한 속성 | 모조지, 백상지, 아트지, 코팅지 |
+| paper_size | 용지 규격. print-order(size)와 대응 | 210x297, 188x257, 148x210 |
+| current_qty_kg | 현재 재고량 (kg 단위) | 2500, 800 |
+| unit_price | kg당 단가 (원) | 850, 1350 |
+| supplier | 용지 공급 업체명 | 한솔제지, 무림페이퍼 |
+
+---
+
+## Object 간 관계 요약
+
+```
+                    FK (machine_id)
+print-order  ----------------------->  machine
+     |                                    ^
+     |  FK (machine_id)                   |  FK (machine_id)
+     |                                    |
+     +--- 비즈니스 속성 (paper_type) ---> paper-stock
+     |                                    ^
+     |  FK (machine_id)                   |  비즈니스 속성 (paper_type + paper_size)
+     v                                    |
+gang-group  ------------------------------+
+```
+
+- **FK Link**: machine_id 컬럼으로 직접 연결 (PK-FK 관계)
+- **비즈니스 속성 Link**: paper_type, paper_size 등 공통 속성으로 연결 (PK-FK가 아닌 관계)

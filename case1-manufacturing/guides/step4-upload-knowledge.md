@@ -4,6 +4,15 @@
 
 Knowledge(업무 지식) MD 파일 3개를 COS에 업로드하고, 관련 Object와 연결합니다. Agent는 이 Knowledge를 읽고 업무 규칙과 계산 방법을 이해합니다.
 
+Knowledge 등록 시 설정하는 항목:
+
+| 항목 | 설명 |
+|------|------|
+| **이름** | Knowledge를 식별하는 제목. Agent가 이 이름으로 Knowledge를 인식함 |
+| **내용** | MD 파일 업로드 또는 텍스트 직접 입력 |
+| **태그** | Knowledge를 분류하는 키워드. Agent가 관련 Knowledge를 찾을 때 사용. 예: `공정`, `규칙`, `계산식` |
+| **연결 Object** | 이 Knowledge가 관련된 Object. Knowledge-Object Link 생성 |
+
 ---
 
 ## Knowledge 1: 인쇄 공정 5단계 절차
@@ -21,7 +30,13 @@ COS 좌측 메뉴 > Knowledge > 우측 상단 `+ New Knowledge`
 1. `+ New Knowledge` 클릭
 2. `Upload MD` 선택
 3. `knowledge/printing-process.md` 파일을 업로드
-4. Knowledge 이름: `인쇄 공정 5단계 절차`
+4. 아래 항목을 입력합니다:
+
+| 항목 | 값 |
+|------|-----|
+| Knowledge 이름 | `인쇄 공정 5단계 절차` |
+| 태그 | `공정`, `절차`, `인쇄` |
+
 5. 연결할 Object 선택:
    - `print-order` (주문이 5단계를 거쳐 처리됨)
    - `machine` (4단계 인쇄에서 설비 사용)
@@ -30,7 +45,7 @@ COS 좌측 메뉴 > Knowledge > 우측 상단 `+ New Knowledge`
 
 ### 4. 성공했음을 어떻게 아는가
 
-Knowledge 목록에 "인쇄 공정 5단계 절차"가 나타나고, 연결된 Object 3개가 표시되면 성공입니다.
+Knowledge 목록에 "인쇄 공정 5단계 절차"가 나타나고, 태그 `공정`, `절차`, `인쇄`와 연결된 Object 3개가 표시되면 성공입니다.
 
 ---
 
@@ -49,7 +64,13 @@ COS 좌측 메뉴 > Knowledge > 우측 상단 `+ New Knowledge`
 1. `+ New Knowledge` 클릭
 2. `Upload MD` 선택
 3. `knowledge/ganging-rules.md` 파일을 업로드
-4. Knowledge 이름: `합대 매칭 규칙`
+4. 아래 항목을 입력합니다:
+
+| 항목 | 값 |
+|------|-----|
+| Knowledge 이름 | `합대 매칭 규칙` |
+| 태그 | `규칙`, `합대`, `매칭` |
+
 5. 연결할 Object 선택:
    - `gang-group` (합대 규칙의 직접 대상)
    - `print-order` (합대 대상이 되는 주문)
@@ -58,7 +79,7 @@ COS 좌측 메뉴 > Knowledge > 우측 상단 `+ New Knowledge`
 
 ### 4. 성공했음을 어떻게 아는가
 
-Knowledge 목록에 "합대 매칭 규칙"이 나타나고, 연결된 Object 3개가 표시되면 성공입니다.
+Knowledge 목록에 "합대 매칭 규칙"이 나타나고, 태그 `규칙`, `합대`, `매칭`과 연결된 Object 3개가 표시되면 성공입니다.
 
 ---
 
@@ -77,7 +98,13 @@ COS 좌측 메뉴 > Knowledge > 우측 상단 `+ New Knowledge`
 1. `+ New Knowledge` 클릭
 2. `Upload MD` 선택
 3. `knowledge/production-formula.md` 파일을 업로드
-4. Knowledge 이름: `설비별 생산량 계산`
+4. 아래 항목을 입력합니다:
+
+| 항목 | 값 |
+|------|-----|
+| Knowledge 이름 | `설비별 생산량 계산` |
+| 태그 | `계산식`, `생산량`, `납기` |
+
 5. 연결할 Object 선택:
    - `machine` (설비별 처리량이 계산의 기본)
    - `print-order` (납기 위험 판정 대상)
@@ -86,3 +113,9 @@ COS 좌측 메뉴 > Knowledge > 우측 상단 `+ New Knowledge`
 ### 4. 성공했음을 어떻게 아는가
 
 Knowledge 목록에 총 3개의 Knowledge가 나타나고, 각각 관련 Object와 연결되어 있으면 성공입니다.
+
+| # | Knowledge 이름 | 태그 | 연결 Object |
+|:-:|---------------|------|------------|
+| 1 | 인쇄 공정 5단계 절차 | 공정, 절차, 인쇄 | print-order, machine, gang-group |
+| 2 | 합대 매칭 규칙 | 규칙, 합대, 매칭 | gang-group, print-order, machine |
+| 3 | 설비별 생산량 계산 | 계산식, 생산량, 납기 | machine, print-order |

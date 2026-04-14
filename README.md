@@ -33,9 +33,9 @@ cos-ontology-workshop/
 |-- 00-setup/                      사전 준비 (다운로드 가이드 + 로그인)
 |
 |-- case1-manufacturing/           Case 1: 제조 (인쇄 공정 자동화)
-|   |-- csv/                       Object로 업로드할 CSV 데이터
+|   |-- csv/                       Object로 업로드할 CSV 데이터 (4개)
 |   |-- knowledge/                 Knowledge Dictionary로 업로드할 MD 파일
-|   |-- guides/                    단계별 따라하기 가이드
+|   |-- guides/                    단계별 따라하기 가이드 (6단계)
 |
 |-- case2-enterprise/              Case 2: Enterprise (가전 고객 서비스)
     |-- csv/                       Object로 업로드할 CSV 데이터
@@ -49,13 +49,14 @@ cos-ontology-workshop/
 
 ### Case 1: 제조 -- 인쇄 공정 자동화
 
-인쇄 공장의 설비, 주문, 합대(생산 그룹) 데이터를 온톨로지로 구축하고,
-설비별 작업량을 모니터링하는 Agent를 만듭니다.
+인쇄 공장의 설비, 주문, 합대(생산 그룹), 용지 재고 데이터를 온톨로지로 구축하고,
+설비별 대기현황 모니터링 + 생산량 시뮬레이션 Agent를 만듭니다.
 
-**구축 순서**: Object 3개 -> Link 3개 -> Knowledge 3개 -> Agent Workflow 1개
+**구축 순서**: Object 4개 -> Link 5개 (FK + 비즈니스 속성) -> Knowledge 3개 -> Agent Workflow 2개
 
-**최종 결과**: Agent에게 "현재 전체 설비의 대기 현황을 알려줘"라고 물으면,
-데이터와 Knowledge를 결합하여 설비별 모니터링 리포트를 자동 생성합니다.
+**최종 결과**:
+- Agent에게 "현재 전체 설비의 대기 현황을 알려줘"라고 물으면, 설비별 모니터링 리포트를 생성합니다.
+- "설비별 생산량을 시뮬레이션하고 납기 위험 주문을 알려줘"라고 물으면, 계산 공식 기반의 시뮬레이션 리포트를 생성합니다.
 
 ### Case 2: Enterprise -- 가전 고객 서비스
 
