@@ -1,0 +1,6 @@
+machine_id,machine_name,machine_type,status,monthly_throughput,queue_count
+M1,A호기,매엽,가동,800,35
+M2,B호기,매엽,가동,750,28
+M3,C호기,윤전,가동,1800,95
+M4,D호기,윤전,정비,1500,0
+M5,E호기,윤전,가동,2000,110
