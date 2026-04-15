@@ -50,51 +50,21 @@ COS 좌측 메뉴 > Ontology Chat
 
 ## Step 4 수행: Knowledge 업로드
 
-> 이 시점에서 Step 4의 Knowledge 2개를 업로드합니다.
+> 이 시점에서 Step 4의 Knowledge 2개를 업로드합니다. 상세 절차는 `guides/step4-upload-knowledge.md`를 참고하세요.
 
 ### Knowledge 1: 멤버십 등급 규칙
 
-1. COS 좌측 메뉴 > Knowledge > `+ New Knowledge`
-2. 아래 정보를 입력합니다:
-
-| 항목 | 값 |
-|------|-----|
-| Knowledge 이름 | `멤버십 등급 규칙` |
-| 태그 | `규칙`, `멤버십`, `등급` |
-
-3. `knowledge/membership-rules.md`의 전체 내용을 붙여넣기
-4. 저장
-5. Knowledge-Object Link 생성:
-
-| 항목 | 값 |
-|------|-----|
-| Source | `멤버십 등급 규칙` (Knowledge) |
-| Target | `Customer` (Object) |
-| Link 이름 | `membership_rules_for_customer` |
-| Description | `멤버십 등급 규칙이 적용되는 대상 고객` |
-| Term | `적용 대상 고객` |
+1. COS 좌측 메뉴 > Ontology > Knowledge > `+ New Knowledge`
+2. Knowledge 이름: `멤버십 등급 규칙`, 태그: `규칙`, `멤버십`, `등급`
+3. `knowledge/membership-rules.md`의 전체 내용을 붙여넣기 → 저장
+4. Ontology Graph에서 `멤버십 등급 규칙` → `Customer` 드래그 → Link Type: `출처 (SourceOf)`, Link Name: `멤버십 등급 규칙이 적용되는 고객` → 저장
 
 ### Knowledge 2: 제품 도메인 용어사전
 
 1. `+ New Knowledge`
-2. 아래 정보를 입력합니다:
-
-| 항목 | 값 |
-|------|-----|
-| Knowledge 이름 | `제품 도메인 용어사전` |
-| 태그 | `용어`, `제품`, `가전` |
-
-3. `knowledge/product-glossary.md`의 전체 내용을 붙여넣기
-4. 저장
-5. Knowledge-Object Link 생성:
-
-| 항목 | 값 |
-|------|-----|
-| Source | `제품 도메인 용어사전` (Knowledge) |
-| Target | `Product` (Object) |
-| Link 이름 | `glossary_for_product` |
-| Description | `제품 관련 도메인 용어 정의` |
-| Term | `용어 참조 대상 제품` |
+2. Knowledge 이름: `제품 도메인 용어사전`, 태그: `용어`, `제품`, `가전`
+3. `knowledge/product-glossary.md`의 전체 내용을 붙여넣기 → 저장
+4. Ontology Graph에서 `제품 도메인 용어사전` → `Product` 드래그 → Link Type: `출처 (SourceOf)`, Link Name: `제품 관련 도메인 용어 정의` → 저장
 
 ---
 
