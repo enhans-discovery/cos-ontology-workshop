@@ -85,6 +85,6 @@ COS 좌측 메뉴 > Ontology > Knowledge > [+ New Knowledge]
 - Knowledge 내용에 15개 이상의 용어 정의가 포함됨
 - Link 목록에 "glossary_for_product"가 표시됨
 - Ontology Graph 전체 구조:
-  - 멤버십 등급 규칙 -> Customer -> Product <- ProductEducation
+  - 멤버십 등급 규칙 -> Customer -> PurchaseHistory -> Product <- ProductEducation
   - 제품 도메인 용어사전 -> Product
-  - 총 3개 Object + 2개 Knowledge + 4개 Link
+  - 총 4개 Object + 2개 Knowledge + 5개 Link

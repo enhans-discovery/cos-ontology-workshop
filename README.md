@@ -63,7 +63,7 @@ cos-ontology-workshop/
 **Case 1과 다른 점**: 비정형 PDF에서 데이터를 추출하여 Object로 변환하는 과정과,
 Knowledge 유무에 따른 Agent 답변 품질 차이를 직접 체험합니다.
 
-**구축 순서**: Object 3개 (정형 2 + 비정형 추출 1) -> Link 2개 -> Knowledge 2개 -> Ontology Chat Before/After 체험
+**구축 순서**: Object 4개 (정형 3 + 비정형 추출 1) -> Link 3개 (모두 Property-level FK) -> Knowledge 2개 -> Ontology Chat Before/After 체험
 
 **핵심 체험**:
 - 비정형 PDF -> 정형 CSV -> Object 변환 과정

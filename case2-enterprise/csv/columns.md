@@ -35,6 +35,24 @@ SH전자 가전 제품 모델 카탈로그.
 
 ---
 
+## purchase-history.csv -- 구매 이력
+
+고객의 제품 구매 이력. Customer와 Product를 연결하는 중간 테이블이다.
+
+고객 1명이 여러 제품을 구매할 수 있고(Customer→PurchaseHistory: 1:N), 동일 제품을 여러 고객이 구매할 수 있다(PurchaseHistory→Product: N:1). 이 중간 테이블이 있어야 Customer와 Product를 Property-level Link로 연결할 수 있다.
+
+| 컬럼명 | 타입 | 설명 |
+|--------|------|------|
+| purchase_id | TEXT (PK) | 구매 건별 고유 식별자. PH-001 ~ PH-033 형태 |
+| cust_id | TEXT (FK) | 구매한 고객. customer.csv의 cust_id를 참조 |
+| model_code | TEXT (FK) | 구매한 제품 모델. product.csv의 model_code를 참조 |
+| purchase_date | DATE | 구매일. YYYY-MM-DD 형식 |
+| purchase_amount | INTEGER | 구매 금액(원). 해당 건의 실결제 금액 |
+
+customer.csv의 total_purchase_amount는 이 테이블의 해당 고객 purchase_amount 합산과 대체로 일치한다. VIP 고객(C0001~C0005)은 3~4건, Gold 고객은 1~2건, Silver/일반은 0~1건의 구매 이력을 가진다.
+
+---
+
 ## product-education.csv -- 제품 교육자료 (비정형 문서 추출)
 
 이 CSV는 원래 PDF 문서였던 제품 교육자료를 별도의 추출 파이프라인을 통해 정형 데이터로 변환한 결과물이다.

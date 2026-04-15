@@ -129,3 +129,43 @@ COS 좌측 메뉴 > Objects > `gang-group` 클릭 > 상단 `Settings` 탭
 ### 4. 성공했음을 어떻게 아는가
 
 Settings 탭에서 displayName이 "합대 그룹"으로 표시되고, 데이터 탭의 컬럼 헤더가 한글로 바뀌면 성공입니다.
+
+---
+
+## Object 4: paper-stock
+
+### 1. 어떤 메뉴에 들어가야 하는가
+
+COS 좌측 메뉴 > Objects > `paper-stock` 클릭 > 상단 `Settings` 탭
+
+### 2. GitHub 파일 중 무엇을 참고하는가
+
+`csv/columns.md` - paper-stock.csv 섹션에서 각 컬럼의 의미를 확인합니다.
+
+### 3. 어떻게 단계별로 수행하는가
+
+1. Settings 탭에서 아래 값을 입력합니다:
+
+| 항목 | 값 (복사붙여넣기용) |
+|------|-------------------|
+| displayName | `용지 재고` |
+| description | `인쇄에 사용하는 용지의 재고 현황. 용지 종류(모조지/백상지/아트지/코팅지)와 규격별 재고량 및 단가를 관리하며, 주문 및 합대그룹과 공통 속성(paper_type, paper_size)으로 연결된다.` |
+| PK | `stock_id` |
+| NK | `paper_type` |
+
+2. 각 Property의 displayName을 설정합니다:
+
+| Property | displayName |
+|----------|-------------|
+| stock_id | `재고 ID` |
+| paper_type | `용지 종류` |
+| paper_size | `용지 규격` |
+| current_qty_kg | `현재 재고량(kg)` |
+| unit_price | `단가` |
+| supplier | `공급처` |
+
+3. `Save` 클릭
+
+### 4. 성공했음을 어떻게 아는가
+
+Settings 탭에서 displayName이 "용지 재고"로 표시되고, 데이터 탭의 컬럼 헤더가 한글로 바뀌면 성공입니다.

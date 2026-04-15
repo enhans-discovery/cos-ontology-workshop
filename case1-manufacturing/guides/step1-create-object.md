@@ -2,7 +2,7 @@
 
 ## 이 단계에서 무엇을 하는가
 
-CSV 파일을 COS에 업로드하여 Object(데이터 테이블)를 생성합니다. 설비 -> 주문 -> 합대그룹 순서로 3개의 Object를 만듭니다.
+CSV 파일을 COS에 업로드하여 Object(데이터 테이블)를 생성합니다. 설비 -> 주문 -> 합대그룹 -> 용지재고 순서로 4개의 Object를 만듭니다.
 
 ---
 
@@ -78,3 +78,28 @@ COS 좌측 메뉴 > Objects > 우측 상단 `+ New Object` > `Upload CSV`
 ### 4. 성공했음을 어떻게 아는가
 
 Objects 목록에 `gang-group`이 나타나고, 데이터 탭에서 30행 (G-001~G-030)이 보이면 성공입니다.
+
+---
+
+## Object 4: 용지재고 (paper-stock)
+
+### 1. 어떤 메뉴에 들어가야 하는가
+
+COS 좌측 메뉴 > Objects > 우측 상단 `+ New Object` > `Upload CSV`
+
+### 2. GitHub 파일 중 무엇을 참고하는가
+
+`csv/paper-stock.csv` - 용지 재고 현황입니다. 용지 종류/규격별 현재 재고량, 단가, 공급처를 관리합니다. 주문 및 합대그룹과 공통 속성(paper_type, paper_size)으로 연결됩니다.
+
+### 3. 어떻게 단계별로 수행하는가
+
+1. `+ New Object` 클릭
+2. `Upload CSV` 선택
+3. `csv/paper-stock.csv` 파일을 드래그 앤 드롭
+4. Object 이름을 `paper-stock`으로 입력
+5. 미리보기에서 10행이 모두 표시되는지 확인
+6. `Create` 클릭
+
+### 4. 성공했음을 어떻게 아는가
+
+Objects 목록에 `paper-stock`이 나타나고, 데이터 탭에서 10행 (PS-001~PS-010)이 보이면 성공입니다.

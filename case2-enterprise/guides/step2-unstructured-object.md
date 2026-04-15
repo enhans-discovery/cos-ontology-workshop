@@ -95,14 +95,15 @@ COS 좌측 메뉴 > Objects > 우측 상단 `+ New Object`
 
 ---
 
-## 정리: 3가지 데이터 소스
+## 정리: 4가지 데이터 소스
 
-지금까지 3가지 유형의 데이터로 Object를 만들었습니다:
+지금까지 4가지 유형의 데이터로 Object를 만들었습니다:
 
-| Object | 원본 데이터 유형 | 행 수 | 특징 |
-|--------|---------------|:-----:|------|
-| Customer | 정형 (DB/CSV) | 50 | 고유 PK 있음, 숫자/텍스트 정돈됨 |
-| Product | 정형 (DB/CSV) | 20 | 고유 PK 있음, 카테고리 구조화 |
-| ProductEducation | **비정형 (PDF) -> 정형 변환** | 15 | PK 없음, 서술형 텍스트에서 추출 |
+| Object | 원본 데이터 유형 | 행 수 | PK | 특징 |
+|--------|---------------|:-----:|------|------|
+| Customer | 정형 (DB/CSV) | 50 | cust_id | 고유 PK 있음 |
+| Product | 정형 (DB/CSV) | 20 | model_code | 고유 PK 있음 |
+| PurchaseHistory | 정형 (DB/CSV) | 33 | purchase_id | Customer-Product 연결 중간 테이블 |
+| ProductEducation | **비정형 (PDF) -> 정형 변환** | 15 | 없음 | FK(category)로 Product와 연결 |
 
-다음 Step 3에서 이 3개 Object를 Link로 연결합니다.
+다음 Step 3에서 이 4개 Object를 Link로 연결합니다.
